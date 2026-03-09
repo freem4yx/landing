@@ -132,7 +132,7 @@
     }
 
     .countdown-number {
-        font-size: 1.6em;
+        font-size: 2.1em;
         min-width: 40px;
     }
 
@@ -151,8 +151,8 @@
     }
 
     .contact-photo {
-        width: 70px;
-        height: 70px;
+        width: 120px;
+        height: 120px;
         border-width: 2px;
     }
 
@@ -259,7 +259,8 @@
         touch-action: manipulation;
     }
 
-    a, button {
+    a,
+    button {
         min-height: 44px;
         min-width: 44px;
     }
