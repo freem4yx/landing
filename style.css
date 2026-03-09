@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Caveat", serif;
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #faf8f5 50%,
+        #f5f0e8 100%
+    );
+    min-height: 100vh;
+    color: #2c2c2c;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e0d5;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-shadow: none;
+}
+
+header p {
+    font-size: 2em;
+    color: #3c3c3c;
+}
+
+.childhood-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.childhood-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    border: 4px solid #fff;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: #8b7355;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.5em;
+    position: relative;
+}
+
+section h3 {
+    color: #8b7355;
+    font-family: Caveat;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    position: relative;
+}
+
+/* Introduction */
+.intro-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.intro-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 3px solid #f8bbd9;
+}
+
+.intro-text {
+    flex: 1;
+    font-size: 1.5em;
+    line-height: 1.4;
+    color: #3c3c3c;
+}
+
+/* Calendar */
+.calendar {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+    border-radius: 15px;
+}
+
+.calendar-date {
+    font-size: 3em;
+    color: #c2185b;
+    font-weight: bold;
+    display: inline-block;
+    padding: 20px 40px;
+    border: 4px solid #f48fb1;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(194, 24, 91, 0.2);
+}
+
+/* Venue */
+.venue-info {
+    text-align: center;
+}
+
+.map-container {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #f8bbd9;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.address {
+    font-size: 2.2em;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 2.5em;
+    color: #8b7355;
+    font-weight: bold;
+}
+
+/* Countdown Timer */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0px;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f0e8 100%);
+    padding: 20px 30px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 100px;
+    border: 1px solid #e8e0d5;
+}
+
+.countdown-number {
+    font-size: 2.5em;
+    color: #a35b08;
+    display: block;
+    min-width: 60px;
+}
+
+.countdown-label {
+    font-size: 0.9em;
+    color: #5c5c5c;
+    text-transform: lowercase;
+    display: block;
+    min-height: 20px;
+}
+
+/* Contacts */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #e8e0d5;
+}
+
+.contact-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    object-fit: cover;
+    border: 3px solid #f48fb1;
+    display: block;
+}
+
+.contact-name {
+    font-size: 1.8em;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-phone,
+.contact-email {
+    display: block;
+    margin: 5px 0;
+    color: #3c3c3c;
+    font-size: 1.3em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e8e0d5;
+}
+
+footer h3 {
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-size: 1.9em;
+}
+
+footer p {
+    color: #3c3c3c;
+    font-size: 1.6em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .calendar-date {
+        font-size: 2em;
+        padding: 15px 25px;
+    }
+
+    .countdown-item {
+        min-width: 70px;
+        padding: 15px 20px;
+    }
+
+    .countdown-number {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .intro-photo {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+/* Calendar Styles */
+.calendar-wrapper {
+    background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-align: center;
+    border: 1px solid #e8e0d5;
+}
+
+.calendar-month {
+    font-size: 2.5em;
+    color: #8b7355;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.calendar-day-header {
+    font-weight: bold;
+    color: #8b7355;
+    padding: 5px 5px;
+    font-size: 1.8em;
+}
+
+.calendar-day {
+    background: #fff;
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.9em;
+    color: #3c3c3c;
+    font-weight: 500;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 2px solid #998f76;
+    text-indent: -5px;
+}
+
+.calendar-day:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day.wedding-day {
+    background: #fff;
+    color: #e91e63;
+    font-weight: bold;
+    border: 3px solid #e91e63;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.calendar-note {
+    font-size: 1.9em;
+    color: #8b7355;
+    margin-top: 20px;
+    font-style: italic;
+}

@@ -1,0 +1,306 @@
+/* ========================================
+   МОБИЛЬНАЯ ВЕРСИЯ (улучшенная)
+   ======================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    /* Header */
+    header {
+        padding: 30px 15px;
+        margin-bottom: 20px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+
+    .childhood-photos {
+        gap: 10px;
+    }
+
+    .childhood-photo {
+        width: 120px;
+        height: 120px;
+        border-radius: 15px;
+    }
+
+    /* Sections */
+    section {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+
+    section h3 {
+        font-size: 1.6em;
+        margin-bottom: 10px;
+    }
+
+    /* Introduction */
+    .intro-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .intro-photo {
+        width: 100%;
+        max-width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .intro-text {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .intro-text p {
+        text-align: center !important;
+    }
+
+    /* Calendar */
+    .calendar-wrapper {
+        padding: 15px 10px;
+    }
+
+    .calendar-month {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .calendar-grid {
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .calendar-day-header {
+        font-size: 1.2em;
+        padding: 5px 2px;
+    }
+
+    .calendar-day {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3em;
+        border-width: 1px;
+    }
+
+    .calendar-day.wedding-day {
+        width: 40px;
+        height: 40px;
+        border-width: 2px;
+    }
+
+    .calendar-note {
+        font-size: 1.3em;
+        margin-top: 15px;
+    }
+
+    /* Venue */
+    .map-container {
+        height: 200px;
+        border-width: 2px;
+    }
+
+    .address {
+        font-size: 1.5em;
+    }
+
+    .time {
+        font-size: 1.8em;
+    }
+
+    /* Countdown */
+    .countdown {
+        gap: 10px;
+        padding: 15px 0;
+    }
+
+    .countdown-item {
+        min-width: 65px;
+        padding: 12px 15px;
+        border-radius: 10px;
+    }
+
+    .countdown-number {
+        font-size: 1.6em;
+        min-width: 40px;
+    }
+
+    .countdown-label {
+        font-size: 0.75em;
+    }
+
+    /* Contacts */
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-card {
+        padding: 20px 15px;
+    }
+
+    .contact-photo {
+        width: 70px;
+        height: 70px;
+        border-width: 2px;
+    }
+
+    .contact-name {
+        font-size: 1.5em;
+    }
+
+    .contact-phone,
+    .contact-email {
+        font-size: 1.1em;
+    }
+
+    /* Footer */
+    footer {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+
+    footer h3 {
+        font-size: 1.4em;
+    }
+
+    footer p {
+        font-size: 1.2em;
+    }
+}
+
+/* ========================================
+   ОЧЕНЬ МАЛЕНЬКИЕ ЭКРАНЫ (до 480px)
+   ======================================== */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    .childhood-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 20px 12px;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    .calendar-day {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1em;
+    }
+
+    .calendar-day-header {
+        font-size: 1em;
+    }
+
+    .countdown-item {
+        min-width: 55px;
+        padding: 10px 12px;
+    }
+
+    .countdown-number {
+        font-size: 1.4em;
+    }
+
+    .countdown-label {
+        font-size: 0.65em;
+    }
+
+    .map-container {
+        height: 180px;
+    }
+
+    .contact-photo {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* ========================================
+   УЛУЧШЕНИЯ ДЛЯ СЕНСОРНЫХ ЭКРАНОВ
+   ======================================== */
+@media (hover: none) and (pointer: coarse) {
+    .calendar-day:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .contact-card:hover {
+        transform: none;
+    }
+
+    .countdown-item {
+        touch-action: manipulation;
+    }
+
+    a, button {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* ========================================
+   ПОВЕРНУТЫЙ ЭКРАН (ландшафтный)
+   ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    .childhood-photos {
+        gap: 15px;
+    }
+
+    .childhood-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    section {
+        padding: 20px 15px;
+    }
+
+    .intro-content {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .intro-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .countdown {
+        gap: 15px;
+    }
+}
