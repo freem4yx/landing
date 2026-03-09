@@ -25,12 +25,6 @@
         margin-top: 40px;
     }
 
-    .childhood-photo {
-        width: 400px;
-        height: 400px;
-        border-radius: 15px;
-    }
-
     /* Sections */
     section {
         padding: 25px 15px;
@@ -200,11 +194,6 @@
         font-size: 1.4em;
     }
 
-    .childhood-photo {
-        width: 400px;
-        height: 400px;
-    }
-
     .childhood-photos p {
         margin-top: 40px;
     }
@@ -350,5 +339,25 @@
     .btn-vk {
         padding: 8px 18px;
         font-size: 0.95em;
+    }
+}
+
+/* Для экранов до 768px */
+@media (max-width: 768px) {
+    .childhood-photo {
+        width: 150px;
+        height: 150px;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+}
+
+/* Для экранов до 480px */
+@media (max-width: 480px) {
+    .childhood-photo {
+        width: 120px;
+        height: 120px;
+        max-width: 100%;
+        border-radius: 5px;
     }
 }
