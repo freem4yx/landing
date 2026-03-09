@@ -345,7 +345,6 @@
     .childhood-photo {
         width: 250px;
         height: 250px;
-        max-width: 30%;
         border-radius: 15px;
     }
 }
@@ -355,7 +354,6 @@
     .childhood-photo {
         width: 200px;
         height: 200px;
-        max-width: 30%;
         border-radius: 50px;
     }
 }
