@@ -22,7 +22,8 @@
     }
 
     .childhood-photos p {
-        margin-top: 40px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 
     /* Sections */
@@ -195,7 +196,8 @@
     }
 
     .childhood-photos p {
-        margin-top: 40px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 
     section {
@@ -279,13 +281,9 @@
         gap: 15px;
     }
 
-    .childhood-photo {
-        width: 200px;
-        height: 200px;
-    }
-
     .childhood-photos p {
-        margin-top: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
 
     section {
@@ -345,8 +343,8 @@
 /* Для экранов до 768px */
 @media (max-width: 768px) {
     .childhood-photo {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
         max-width: 30%;
         border-radius: 15px;
     }
