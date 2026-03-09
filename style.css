@@ -48,6 +48,10 @@ header p {
     flex-wrap: wrap;
 }
 
+.childhood-photos p {
+    margin-top: 40px;
+}
+
 .childhood-photo {
     width: 180px;
     height: 180px;

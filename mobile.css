@@ -21,9 +21,13 @@
         gap: 10px;
     }
 
+    .childhood-photos p {
+        margin-top: 40px;
+    }
+
     .childhood-photo {
-        width: 120px;
-        height: 120px;
+        width: 200px;
+        height: 200px;
         border-radius: 15px;
     }
 
@@ -197,8 +201,12 @@
     }
 
     .childhood-photo {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .childhood-photos p {
+        margin-top: 40px;
     }
 
     section {
@@ -283,8 +291,12 @@
     }
 
     .childhood-photo {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .childhood-photos p {
+        margin-top: 20px;
     }
 
     section {
