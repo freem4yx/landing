@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+            rel="stylesheet"
+        />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Приглашение на свадьбу | 06.06.2026</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Caveat", serif;
+                background: linear-gradient(
+                    135deg,
+                    #ffffff 0%,
+                    #faf8f5 50%,
+                    #f5f0e8 100%
+                );
+                min-height: 100vh;
+                color: #2c2c2c;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            /* Header */
+            header {
+                text-align: center;
+                padding: 60px 20px;
+                background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+                border-radius: 20px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                border: 1px solid #e8e0d5;
+            }
+
+            header h1 {
+                font-size: 2.5em;
+                color: #1a1a1a;
+                margin-bottom: 20px;
+                text-shadow: none;
+            }
+
+            header p {
+                font-size: 2em;
+                color: #3c3c3c;
+            }
+
+            .childhood-photos {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 30px;
+                flex-wrap: wrap;
+            }
+
+            .childhood-photo {
+                width: 180px;
+                height: 180px;
+                border-radius: 20px;
+                border: 4px solid #fff;
+                object-fit: cover;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Sections */
+            section {
+                background: #fff;
+                border-radius: 20px;
+                padding: 40px;
+                margin-bottom: 30px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            }
+
+            section h2 {
+                color: #8b7355;
+                text-align: center;
+                margin-bottom: 25px;
+                font-size: 2.5em;
+                position: relative;
+            }
+
+            section h3 {
+                color: #8b7355;
+                font-family: Caveat;
+                text-align: center;
+                margin-bottom: 5px;
+                font-size: 2.5em;
+                position: relative;
+            }
+
+            /* Introduction */
+            .intro-content {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            .intro-photo {
+                width: 200px;
+                height: 200px;
+                border-radius: 15px;
+                object-fit: cover;
+                border: 3px solid #f8bbd9;
+            }
+
+            .intro-text {
+                flex: 1;
+                font-size: 1.5em;
+                line-height: 1.4;
+                color: #3c3c3c;
+            }
+
+            /* Calendar */
+            .calendar {
+                text-align: center;
+                padding: 30px;
+                background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+                border-radius: 15px;
+            }
+
+            .calendar-date {
+                font-size: 3em;
+                color: #c2185b;
+                font-weight: bold;
+                display: inline-block;
+                padding: 20px 40px;
+                border: 4px solid #f48fb1;
+                border-radius: 50%;
+                background: #fff;
+                box-shadow: 0 4px 15px rgba(194, 24, 91, 0.2);
+            }
+
+            /* Venue */
+            .venue-info {
+                text-align: center;
+            }
+
+            .map-container {
+                width: 100%;
+                height: 300px;
+                border-radius: 15px;
+                overflow: hidden;
+                margin-bottom: 20px;
+                border: 3px solid #f8bbd9;
+            }
+
+            .map-container iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+            .address {
+                font-size: 2.2em;
+                color: #1a1a1a;
+                margin-bottom: 10px;
+            }
+
+            .time {
+                font-size: 2.5em;
+                color: #8b7355;
+                font-weight: bold;
+            }
+
+            /* Countdown Timer */
+            .countdown {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                padding: 20px 0px;
+                flex-wrap: wrap;
+            }
+
+            .countdown-item {
+                background: linear-gradient(135deg, #ffffff 0%, #f5f0e8 100%);
+                padding: 20px 30px;
+                border-radius: 15px;
+                text-align: center;
+                min-width: 100px;
+                border: 1px solid #e8e0d5;
+            }
+
+            .countdown-number {
+                font-size: 2.5em;
+                color: #a35b08;
+                display: block;
+                min-width: 60px;
+            }
+
+            .countdown-label {
+                font-size: 0.9em;
+                color: #5c5c5c;
+                text-transform: lowercase;
+                display: block;
+                min-height: 20px;
+            }
+
+            /* Contacts */
+            .contacts-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .contact-card {
+                background: linear-gradient(135deg, #ffffff 0%, #faf8f5 100%);
+                padding: 25px;
+                border-radius: 15px;
+                text-align: center;
+                border: 2px solid #e8e0d5;
+            }
+
+            .contact-photo {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                margin: 0 auto 15px;
+                object-fit: cover;
+                border: 3px solid #f48fb1;
+                display: block;
+            }
+
+            .contact-name {
+                font-size: 1.8em;
+                color: #1a1a1a;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .contact-phone,
+            .contact-email {
+                display: block;
+                margin: 5px 0;
+                color: #3c3c3c;
+                font-size: 1.3em;
+            }
+
+            /* Footer */
+            footer {
+                text-align: center;
+                padding: 40px;
+                background: linear-gradient(135deg, #ffffff 0%, #f9f5f0 100%);
+                border-radius: 20px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                border: 1px solid #e8e0d5;
+            }
+
+            footer h3 {
+                color: #1a1a1a;
+                margin-bottom: 15px;
+                font-size: 1.9em;
+            }
+
+            footer p {
+                color: #3c3c3c;
+                font-size: 1.6em;
+            }
+
+            /* Responsive */
+            @media (max-width: 600px) {
+                header h1 {
+                    font-size: 1.8em;
+                }
+
+                .calendar-date {
+                    font-size: 2em;
+                    padding: 15px 25px;
+                }
+
+                .countdown-item {
+                    min-width: 70px;
+                    padding: 15px 20px;
+                }
+
+                .countdown-number {
+                    font-size: 1.8em;
+                }
+
+                section {
+                    padding: 25px;
+                }
+
+                .intro-photo {
+                    width: 100%;
+                    height: 250px;
+                }
+            }
+
+            /* Calendar Styles */
+            .calendar-wrapper {
+                background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+                border-radius: 20px;
+                padding: 20px 30px;
+                text-align: center;
+                border: 1px solid #e8e0d5;
+            }
+
+            .calendar-month {
+                font-size: 2.5em;
+                color: #8b7355;
+                font-weight: bold;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+            }
+
+            .calendar-grid {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                gap: 15px;
+                max-width: 500px;
+                margin: 0 auto 30px;
+            }
+
+            .calendar-day-header {
+                font-weight: bold;
+                color: #8b7355;
+                padding: 5px 5px;
+                font-size: 1.8em;
+            }
+
+            .calendar-day {
+                background: #fff;
+                padding: 0;
+                border-radius: 50%;
+                font-size: 1.9em;
+                color: #3c3c3c;
+                font-weight: 500;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                border: 2px solid #998f76;
+                text-indent: -5px;
+            }
+
+            .calendar-day:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .calendar-day.wedding-day {
+                background: #fff;
+                color: #e91e63;
+                font-weight: bold;
+                border: 3px solid #e91e63;
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            .calendar-note {
+                font-size: 1.9em;
+                color: #8b7355;
+                margin-top: 20px;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header / Greeting -->
+            <header>
+                <h1>💕 Приглашение на свадьбу 💕</h1>
+
+                <!-- ДЕТСКИЕ ФОТОГРАФИИ -->
+                <!-- Замените src на пути к вашим фотографиям -->
+                <div class="childhood-photos">
+                    <img
+                        src="http://i.pinimg.com/originals/fb/2b/57/fb2b57f452983428994cfe67b4e3c748.jpg"
+                        alt="Жених в детстве"
+                        class="childhood-photo"
+                    />
+                    <p>Что-то тут такое</p>
+                    <img
+                        src="https://picsum.photos/seed/bride1992/200/200"
+                        alt="Невеста в детстве"
+                        class="childhood-photo"
+                    />
+                </div>
+                <!-- Пример: src="images/childhood-groom.jpg" -->
+            </header>
+
+            <!-- Introduction -->
+            <section>
+                <h2>Обращение молодожёнов</h2>
+                <div class="intro-content">
+                    <!-- ОБЩЕЕ ФОТО ПАРЫ -->
+                    <!-- Замените src на ваше фото -->
+                    <img
+                        src="src/images/3.jpg"
+                        alt="Наше фото"
+                        class="intro-photo"
+                    />
+                    <!-- Пример: src="images/couple-photo.jpg" -->
+
+                    <div class="intro-text">
+                        <p id="greeting-text">Дорогие наши друзья и родные!</p>
+                        <br />
+                        <p>
+                            С сердцами, полными любви и благодарности, мы
+                            приглашаем вас разделить с нами этот особенный день
+                            — день рождения нашей семьи.
+                        </p>
+                        <br />
+                        <p>
+                            Ваше присутствие сделает наш праздник ещё более
+                            тёплым и незабываемым!
+                        </p>
+                        <br />
+                        <p style="text-align: right">
+                            С любовью, Елизавета и Николай 💕
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calendar -->
+            <section>
+                <div class="calendar-wrapper">
+                    <div class="calendar-month">ИЮНЬ 2026</div>
+                    <div class="calendar-grid">
+                        <div class="calendar-day-header">ПН</div>
+                        <div class="calendar-day-header">ВТ</div>
+                        <div class="calendar-day-header">СР</div>
+                        <div class="calendar-day-header">ЧТ</div>
+                        <div class="calendar-day-header">ПТ</div>
+                        <div class="calendar-day-header">СБ</div>
+                        <div class="calendar-day-header">ВС</div>
+
+                        <div class="calendar-day">1</div>
+                        <div class="calendar-day">2</div>
+                        <div class="calendar-day">3</div>
+                        <div class="calendar-day">4</div>
+                        <div class="calendar-day">5</div>
+                        <div class="calendar-day wedding-day">6</div>
+                        <div class="calendar-day">7</div>
+
+                        <div class="calendar-day">8</div>
+                        <div class="calendar-day">9</div>
+                        <div class="calendar-day">10</div>
+                        <div class="calendar-day">11</div>
+                        <div class="calendar-day">12</div>
+                        <div class="calendar-day">13</div>
+                        <div class="calendar-day">14</div>
+
+                        <div class="calendar-day">15</div>
+                        <div class="calendar-day">16</div>
+                        <div class="calendar-day">17</div>
+                        <div class="calendar-day">18</div>
+                        <div class="calendar-day">19</div>
+                        <div class="calendar-day">20</div>
+                        <div class="calendar-day">21</div>
+
+                        <div class="calendar-day">22</div>
+                        <div class="calendar-day">23</div>
+                        <div class="calendar-day">24</div>
+                        <div class="calendar-day">25</div>
+                        <div class="calendar-day">26</div>
+                        <div class="calendar-day">27</div>
+                        <div class="calendar-day">28</div>
+
+                        <div class="calendar-day">29</div>
+                        <div class="calendar-day">30</div>
+                    </div>
+                    <p class="calendar-note">Отметим этот день в календаре!</p>
+                </div>
+            </section>
+
+            <!-- Venue -->
+            <section>
+                <h2>Место проведения</h2>
+                <div class="venue-info">
+                    <!-- ЯНДЕКС КАРТА -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?ll=42.7031154%2C56.200388&z=16&pt=42.703115,56.200388"
+                            allowfullscreen="true"
+                        ></iframe>
+                    </div>
+                    <!-- Чтобы получить свою карту: зайдите на yandex.ru/map-widget → найдите адрес → скопируйте код iframe -->
+
+                    <p class="address">📍 Гороховец, ул. Революции 40А</p>
+                    <p class="time">16:00</p>
+                </div>
+            </section>
+
+            <!-- Countdown Timer -->
+            <section>
+                <h3>Совсем скоро…</h3>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Дней</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Часов</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Минут</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Секунд</span>
+                    </div>
+                </div>
+                <h3>До дня, который станет</h3>
+                <h3>началом нового «мы»</h3>
+            </section>
+
+            <!-- Contact Information -->
+            <section>
+                <h2>Контактная информация</h2>
+                <div class="contacts-grid">
+                    <!-- НЕВЕСТА -->
+                    <div class="contact-card">
+                        <img
+                            src="https://picsum.photos/seed/bridecontact/150/150"
+                            alt="Невеста"
+                            class="contact-photo"
+                        />
+                        <!-- Пример: src="images/bride-avatar.jpg" -->
+                        <p class="contact-name">Елизавета</p>
+                        <span class="contact-phone">📞 +7 (920) 035-47-83</span>
+                        <span class="contact-email">✉️ ce@example.com</span>
+                    </div>
+
+                    <!-- ЖЕНИХ -->
+                    <div class="contact-card">
+                        <img
+                            src="https://picsum.photos/seed/groomcontact/150/150"
+                            alt="Жених"
+                            class="contact-photo"
+                        />
+                        <!-- Пример: src="images/groom-avatar.jpg" -->
+                        <p class="contact-name">Николай</p>
+                        <span class="contact-phone">📞 +7 (910) 186-16-00</span>
+                        <span class="contact-email">✉️ alex@example.com</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer>
+                <h3>Подтвердите присутствие до 1 мая 2026</h3>
+                <p>Мы будем рады разделить этот день с вами!</p>
+                <p style="margin-top: 10px">
+                    С любовью, Елизавета и Николай ❤️
+                </p>
+            </footer>
+        </div>
+
+        <script>
+            // Countdown Timer
+            const weddingDate = new Date("2026-06-06T16:00:00").getTime();
+
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = weddingDate - now;
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(
+                    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+                );
+                const minutes = Math.floor(
+                    (distance % (1000 * 60 * 60)) / (1000 * 60),
+                );
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days
+                    .toString()
+                    .padStart(2, "0");
+                document.getElementById("hours").textContent = hours
+                    .toString()
+                    .padStart(2, "0");
+                document.getElementById("minutes").textContent = minutes
+                    .toString()
+                    .padStart(2, "0");
+                document.getElementById("seconds").textContent = seconds
+                    .toString()
+                    .padStart(2, "0");
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+        </script>
+
+        <script>
+            // Персонализация обращения
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestName = urlParams.get("name");
+
+            if (guestName) {
+                const greeting = document.getElementById("greeting-text");
+                // Склоняем имя (просто добавляем окончание)
+                greeting.textContent = `Дорогие ${guestName}!`;
+            }
+        </script>
+    </body>
+</html>
