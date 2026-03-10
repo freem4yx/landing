@@ -9,9 +9,7 @@ function updateCountdown() {
     const hours = Math.floor(
         (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
     );
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) / (1000 * 60),
-    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     document.getElementById("days").textContent = days
@@ -38,5 +36,5 @@ const guestName = urlParams.get("name");
 if (guestName) {
     const greeting = document.getElementById("greeting-text");
     // Склоняем имя (просто добавляем окончание)
-    greeting.textContent = `Дорогие ${guestName}!`;
+    greeting.textContent = `${guestName}!`;
 }
